@@ -1,18 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmrdmil31g7s"]
+[gd_scene load_steps=5 format=3 uid="uid://dmrdmil31g7s"]
 
-[ext_resource type="PackedScene" uid="uid://tvju2dyy547n" path="res://common/Platform.tscn" id="1_erapm"]
-[ext_resource type="PackedScene" uid="uid://2chccghua8le" path="res://common/Collectible.tscn" id="2_q0rle"]
 [ext_resource type="PackedScene" uid="uid://3qswbxgyj0k6" path="res://common/Player.tscn" id="3_npr1j"]
+[ext_resource type="PackedScene" uid="uid://1qo1qs0ravof" path="res://common/CoinPlatform.tscn" id="4_8fdud"]
 [ext_resource type="PackedScene" uid="uid://brvd0sm8361xb" path="res://common/Floor.tscn" id="4_jphtt"]
 [ext_resource type="PackedScene" uid="uid://b1iq4ayu4qbgh" path="res://common/InputController.tscn" id="5_o4eoa"]
 
 [node name="Environment" type="Node3D"]
 
-[node name="Platform" parent="." instance=ExtResource("1_erapm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.17, 1.12466, 0)
-
-[node name="Collectible" parent="Platform" instance=ExtResource("2_q0rle")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.34637, 0)
+[node name="CoinPlatform" parent="." instance=ExtResource("4_8fdud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("3_npr1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42436, 5.50612, 0)
