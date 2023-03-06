@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6px6d7ttjgv"]
+[gd_scene load_steps=8 format=3 uid="uid://3qswbxgyj0k6"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1"]
+[ext_resource type="Script" path="res://common/Player.gd" id="1_sjis6"]
 
 [sub_resource type="BoxMesh" id="4"]
 size = Vector3(2.8, 0.5, 0.5)
@@ -28,7 +28,7 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 can_sleep = false
-script = ExtResource("1")
+script = ExtResource("1_sjis6")
 
 [node name="Ears" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

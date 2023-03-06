@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cllmvqge4r5w6"]
+[gd_scene load_steps=5 format=3 uid="uid://2chccghua8le"]
 
-[ext_resource type="Script" path="res://Collectible.gd" id="1"]
+[ext_resource type="Script" path="res://common/Collectible.gd" id="1_7t44n"]
 
 [sub_resource type="StandardMaterial3D" id="3"]
 albedo_color = Color(1, 0.937255, 0, 1)
@@ -15,7 +15,7 @@ height = 0.5
 radius = 1.0
 
 [node name="Collectible" type="Area3D"]
-script = ExtResource("1")
+script = ExtResource("1_7t44n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
