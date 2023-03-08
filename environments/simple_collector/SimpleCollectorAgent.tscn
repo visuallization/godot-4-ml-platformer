@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0873roefbkdk"]
+
+[ext_resource type="Script" path="res://environments/simple_collector/SimpleCollectorAgent.gd" id="1_jaix6"]
+
+[node name="SimpleCollectorAgent" type="Node"]
+script = ExtResource("1_jaix6")
