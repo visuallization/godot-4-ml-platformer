@@ -10,18 +10,25 @@ var forward_input := 0.0 : get = get_forward_input, set = set_forward_input
 var turn_input := 0.0 : get = get_turn_input, set = set_turn_input
 var jump_input := false : get = get_jump_input, set = set_jump_input
 
-@onready var capsule_collider: CollisionShape3D = $CapsuleCollider
+var resetted_transform = null
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	print("Hello Player!")
+@onready var capsule_collider: CollisionShape3D = $CapsuleCollider
 
 func _physics_process(delta) -> void:
 	check_grounded()
 
 func _integrate_forces(state) -> void:
+	if resetted_transform:
+		state.linear_velocity = Vector3.ZERO
+		state.transform = resetted_transform
+		
+		resetted_transform = null
+		
 	process_actions(state)
 
+func reset(position: Transform3D) -> void:
+	resetted_transform = position
+	
 func check_grounded() -> void:
 	is_grounded = false
 	var capsule_height: float = max(capsule_collider.shape.radius * 2.0, capsule_collider.shape.height)

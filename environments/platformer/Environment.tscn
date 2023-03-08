@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://3qswbxgyj0k6" path="res://common/Player.tscn" id="3_npr1j"]
 [ext_resource type="PackedScene" uid="uid://1qo1qs0ravof" path="res://common/CoinPlatform.tscn" id="4_8fdud"]
 [ext_resource type="PackedScene" uid="uid://brvd0sm8361xb" path="res://common/Floor.tscn" id="4_jphtt"]
-[ext_resource type="PackedScene" uid="uid://b1iq4ayu4qbgh" path="res://common/InputController.tscn" id="5_o4eoa"]
+[ext_resource type="PackedScene" uid="uid://bs4sv6h3abxl0" path="res://environments/platformer/PlatformerAgent.tscn" id="4_v1373"]
 
 [node name="Environment" type="Node3D"]
 
@@ -22,5 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.43153, 0)
 
-[node name="InputController" parent="." instance=ExtResource("5_o4eoa")]
-player_path = NodePath("../Player")
+[node name="PlatformerAgent" parent="." instance=ExtResource("4_v1373")]
+
+[connection signal="coin_collected" from="CoinPlatform" to="PlatformerAgent" method="on_pickup_coin"]

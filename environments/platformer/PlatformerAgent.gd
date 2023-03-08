@@ -42,7 +42,7 @@ func _ready():
 	player_start_transform = player.global_transform
 	raycast_sensor.activate()
 
-	platform_start_position = start_platform.translation
+	platform_start_position = start_platform.position
 	
 	spawn_platform(null, true)
 
@@ -83,19 +83,18 @@ func spawn_platform(spawn_origin = null, defer = false):
 		coin_platform.queue_free()
 
 	coin_platform = coin_platform_scene.instance()
-	var origin = spawn_origin if spawn_origin != null else Vector3(player.translation.x, platform_start_position.y, player.translation.z)
-	var quat = Quaternion()
-	quat.from_euler(Vector3.UP * deg_to_rad(rng.randi_range(0, 360)))
-	var spawn_position: Vector3 = origin + quat * Vector3.FORWARD * platform_spawn_distance
+	var origin = spawn_origin if spawn_origin != null else Vector3(player.position.x, platform_start_position.y, player.position.z)
+	var rotation = Quaternion().from_euler(Vector3.UP * deg_to_rad(rng.randi_range(0, 360)))
+	var spawn_position: Vector3 = origin + rotation * Vector3.FORWARD * platform_spawn_distance
 
 	# if the platform would be spawned outside of the envrionment boundaries
 	# calculate a new position
 	while abs(spawn_position.x) > boundaries.x or abs(spawn_position.z) > boundaries.z:
-		quat.from_euler(Vector3.UP * deg_to_rad(rng.randi_range(0, 360)))
-		spawn_position = origin + quat * Vector3.FORWARD * platform_spawn_distance
+		rotation = Quaternion().from_euler(Vector3.UP * deg_to_rad(rng.randi_range(0, 360)))
+		spawn_position = origin + rotation * Vector3.FORWARD * platform_spawn_distance
 	
-	coin_platform.translation = spawn_position
-	coin_platform.connect("coin_collected", self, "on_pickup_coin")
+	coin_platform.position = spawn_position
+	coin_platform.coin_collected.connect(on_pickup_coin)
 
 	# add this deferred call, as this is needed in the _ready function
 	# because the parent node is still busy setting up children
@@ -120,7 +119,7 @@ func reset():
 	coin_platforms.clear()
 
 	start_platform = platform_scene.instance()
-	start_platform.translation = platform_start_position
+	start_platform.position = platform_start_position
 	get_parent().add_child(start_platform)
 
 	player.reset(player_start_transform)
@@ -225,3 +224,4 @@ func get_reward():
 
 func zero_reward():
 	reward = 0
+

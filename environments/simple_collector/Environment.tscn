@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://1qo1qs0ravof" path="res://common/CoinPlatform.tscn" id="1_adlk6"]
 [ext_resource type="PackedScene" uid="uid://3qswbxgyj0k6" path="res://common/Player.tscn" id="2_a70b7"]
 [ext_resource type="PackedScene" uid="uid://brvd0sm8361xb" path="res://common/Floor.tscn" id="3_oc27v"]
-[ext_resource type="PackedScene" uid="uid://b1iq4ayu4qbgh" path="res://common/InputController.tscn" id="4_shet0"]
+[ext_resource type="PackedScene" uid="uid://0873roefbkdk" path="res://environments/simple_collector/SimpleCollectorAgent.tscn" id="5_s7acu"]
 
 [node name="Environment" type="Node3D"]
 
@@ -22,5 +22,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.43153, 0)
 
-[node name="InputController" parent="." instance=ExtResource("4_shet0")]
-player_path = NodePath("../Player")
+[node name="SimpleCollectorAgent" parent="." instance=ExtResource("5_s7acu")]
+platform_scene = ExtResource("1_adlk6")
+
+[connection signal="coin_collected" from="CoinPlatform" to="SimpleCollectorAgent" method="on_pickup_coin"]
