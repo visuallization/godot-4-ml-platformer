@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cap524bja8gp0"]
+
+[ext_resource type="PackedScene" uid="uid://d11b6cx48grp7" path="res://environments/simple_collector/Environment.tscn" id="1_ea1u5"]
+[ext_resource type="PackedScene" uid="uid://dmtqjdv2vx81d" path="res://common/MoveableCamera.tscn" id="2_3ekrh"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_eky7l"]
+
+[node name="BatchEnvironments" type="Node3D"]
+
+[node name="Environment" parent="." instance=ExtResource("1_ea1u5")]
+
+[node name="Environment2" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, 0)
+
+[node name="Environment3" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, 0)
+
+[node name="Environment4" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, 0)
+
+[node name="Environment5" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -128.475)
+
+[node name="Environment6" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -128.475)
+
+[node name="Environment7" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -128.475)
+
+[node name="Environment8" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -128.475)
+
+[node name="Environment9" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -257.641)
+
+[node name="Environment10" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -257.641)
+
+[node name="Environment11" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -257.641)
+
+[node name="Environment12" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -257.641)
+
+[node name="Environment13" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -386.116)
+
+[node name="Environment14" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -386.116)
+
+[node name="Environment15" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -386.116)
+
+[node name="Environment16" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -386.116)
+
+[node name="MoveableCamera" parent="." instance=ExtResource("2_3ekrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.3072)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_eky7l")
+speed_up = 8

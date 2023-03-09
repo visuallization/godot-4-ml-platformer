@@ -1,28 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://d11b6cx48grp7"]
+[gd_scene load_steps=6 format=3 uid="uid://d11b6cx48grp7"]
 
 [ext_resource type="PackedScene" uid="uid://1qo1qs0ravof" path="res://common/CoinPlatform.tscn" id="1_adlk6"]
 [ext_resource type="PackedScene" uid="uid://3qswbxgyj0k6" path="res://common/Player.tscn" id="2_a70b7"]
 [ext_resource type="PackedScene" uid="uid://brvd0sm8361xb" path="res://common/Floor.tscn" id="3_oc27v"]
+[ext_resource type="PackedScene" uid="uid://dchudalmdikrl" path="res://common/ResetArea.tscn" id="4_gsoe1"]
 [ext_resource type="PackedScene" uid="uid://0873roefbkdk" path="res://environments/simple_collector/SimpleCollectorAgent.tscn" id="5_s7acu"]
 
 [node name="Environment" type="Node3D"]
 
 [node name="CoinPlatform" parent="." instance=ExtResource("1_adlk6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_a70b7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 3.22749, 0)
 jump_speed = 10.0
 
 [node name="Floor" parent="." instance=ExtResource("3_oc27v")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.43153, 0)
+
+[node name="ResetArea" parent="." instance=ExtResource("4_gsoe1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.1866, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.07525, 31.8766)
 
 [node name="SimpleCollectorAgent" parent="." instance=ExtResource("5_s7acu")]
 platform_scene = ExtResource("1_adlk6")
 
 [connection signal="coin_collected" from="CoinPlatform" to="SimpleCollectorAgent" method="on_pickup_coin"]
+[connection signal="on_enter" from="ResetArea" to="SimpleCollectorAgent" method="on_game_over"]
