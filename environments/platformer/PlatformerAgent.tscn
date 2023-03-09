@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://environments/platformer/PlatformerAgent.gd" id="1_coxr2"]
 
-[node name="PlatformerAgent" type="Node"]
+[node name="PlatformerAgent" type="Node" groups=["AGENT"]]
 script = ExtResource("1_coxr2")

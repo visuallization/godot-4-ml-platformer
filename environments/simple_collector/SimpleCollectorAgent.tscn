@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://environments/simple_collector/SimpleCollectorAgent.gd" id="1_jaix6"]
 
-[node name="SimpleCollectorAgent" type="Node"]
+[node name="SimpleCollectorAgent" type="Node" groups=["AGENT"]]
 script = ExtResource("1_jaix6")

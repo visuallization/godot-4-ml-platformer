@@ -142,8 +142,8 @@ func get_obs():
 	var goal_distance = 0.0
 	var goal_vector = Vector3.ZERO
 
-	goal_distance = player.translation.distance_to(platform.translation)
-	goal_vector = (platform.translation - player.translation).normalized()
+	goal_distance = player.position.distance_to(platform.position)
+	goal_vector = (platform.position - player.position).normalized()
 
 	# goal_vector = goal_vector.rotated(Vector3.UP, -deg2rad(rotation_degrees.y))
 	goal_distance = clamp(goal_distance, 0.0, 20.0)
