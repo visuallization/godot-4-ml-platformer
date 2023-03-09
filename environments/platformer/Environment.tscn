@@ -1,20 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmrdmil31g7s"]
+[gd_scene load_steps=6 format=3 uid="uid://dmrdmil31g7s"]
 
+[ext_resource type="PackedScene" uid="uid://tvju2dyy547n" path="res://common/Platform.tscn" id="2_qd4x6"]
 [ext_resource type="PackedScene" uid="uid://3qswbxgyj0k6" path="res://common/Player.tscn" id="3_npr1j"]
+[ext_resource type="PackedScene" uid="uid://dchudalmdikrl" path="res://common/ResetArea.tscn" id="3_rw5c8"]
 [ext_resource type="PackedScene" uid="uid://1qo1qs0ravof" path="res://common/CoinPlatform.tscn" id="4_8fdud"]
-[ext_resource type="PackedScene" uid="uid://brvd0sm8361xb" path="res://common/Floor.tscn" id="4_jphtt"]
 [ext_resource type="PackedScene" uid="uid://bs4sv6h3abxl0" path="res://environments/platformer/PlatformerAgent.tscn" id="4_v1373"]
 
 [node name="Environment" type="Node3D"]
 
-[node name="CoinPlatform" parent="." instance=ExtResource("4_8fdud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, 0)
-
 [node name="Player" parent="." instance=ExtResource("3_npr1j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
 jump_speed = 10.0
 
-[node name="Floor" parent="." instance=ExtResource("4_jphtt")]
+[node name="Platform" parent="." instance=ExtResource("2_qd4x6")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
@@ -22,6 +20,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.43153, 0)
 
-[node name="PlatformerAgent" parent="." instance=ExtResource("4_v1373")]
+[node name="ResetArea" parent="." instance=ExtResource("3_rw5c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -22.3381, 0)
 
-[connection signal="coin_collected" from="CoinPlatform" to="PlatformerAgent" method="on_pickup_coin"]
+[node name="PlatformerAgent" parent="." instance=ExtResource("4_v1373")]
+platform_scene = ExtResource("2_qd4x6")
+coin_platform_scene = ExtResource("4_8fdud")
+platform_spawn_distance = 15.0
+
+[connection signal="on_enter" from="ResetArea" to="PlatformerAgent" method="on_game_over"]

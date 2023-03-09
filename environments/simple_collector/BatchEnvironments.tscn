@@ -7,54 +7,55 @@
 [node name="BatchEnvironments" type="Node3D"]
 
 [node name="Environment" parent="." instance=ExtResource("1_ea1u5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.1245, 0, 74.6304)
 
 [node name="Environment2" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.63, 0, 74.6304)
 
 [node name="Environment3" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.907, 0, 74.6304)
 
 [node name="Environment4" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, 74.6304)
 
 [node name="Environment5" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -128.475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.1245, 0, -90.6991)
 
 [node name="Environment6" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -128.475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.63, 0, -90.6991)
 
 [node name="Environment7" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -128.475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.907, 0, -90.6991)
 
 [node name="Environment8" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -128.475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -90.6991)
 
 [node name="Environment9" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -257.641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.1245, 0, -257.641)
 
 [node name="Environment10" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -257.641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.63, 0, -257.641)
 
 [node name="Environment11" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -257.641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.907, 0, -257.641)
 
 [node name="Environment12" parent="." instance=ExtResource("1_ea1u5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -257.641)
 
 [node name="Environment13" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -386.116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.1245, 0, -454.297)
 
 [node name="Environment14" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.123, 0, -386.116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.63, 0, -454.297)
 
 [node name="Environment15" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -239.682, 0, -386.116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.907, 0, -454.297)
 
 [node name="Environment16" parent="." instance=ExtResource("1_ea1u5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -386.116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.559, 0, -454.297)
 
 [node name="MoveableCamera" parent="." instance=ExtResource("2_3ekrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.3072)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 164.573)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_eky7l")

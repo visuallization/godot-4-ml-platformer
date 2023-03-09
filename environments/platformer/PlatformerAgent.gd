@@ -82,7 +82,7 @@ func spawn_platform(spawn_origin = null, defer = false):
 		coin_platform = coin_platforms.pop_front()
 		coin_platform.queue_free()
 
-	coin_platform = coin_platform_scene.instance()
+	coin_platform = coin_platform_scene.instantiate()
 	var origin = spawn_origin if spawn_origin != null else Vector3(player.position.x, platform_start_position.y, player.position.z)
 	var rotation = Quaternion().from_euler(Vector3.UP * deg_to_rad(rng.randi_range(0, 360)))
 	var spawn_position: Vector3 = origin + rotation * Vector3.FORWARD * platform_spawn_distance
@@ -118,7 +118,7 @@ func reset():
 
 	coin_platforms.clear()
 
-	start_platform = platform_scene.instance()
+	start_platform = platform_scene.instantiate()
 	start_platform.position = platform_start_position
 	get_parent().add_child(start_platform)
 

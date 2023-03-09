@@ -8,3 +8,4 @@ floor_block_on_wall = false
 script = ExtResource("1_pmipu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+current = true
