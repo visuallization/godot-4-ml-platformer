@@ -10,6 +10,7 @@
 
 [node name="Player" parent="." instance=ExtResource("3_npr1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+move_speed = 15.0
 jump_speed = 10.0
 
 [node name="Platform" parent="." instance=ExtResource("2_qd4x6")]

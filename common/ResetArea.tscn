@@ -6,6 +6,7 @@
 size = Vector3(100, 4, 100)
 
 [node name="ResetArea" type="Area3D"]
+collision_layer = 2
 script = ExtResource("1_vuk02")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
