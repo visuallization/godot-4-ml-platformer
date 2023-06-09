@@ -31,6 +31,8 @@ var move_action: int
 var turn_action: int
 var jump_action: bool
 
+var best_goal_distance := platform_spawn_distance
+
 func _ready():
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -48,6 +50,7 @@ func _ready():
 
 func _physics_process(delta):
 	#print(raycast_sensor.get_observation())
+
 	n_steps += 1
 	if n_steps >= MAX_STEPS:
 		done = true
@@ -64,6 +67,8 @@ func _physics_process(delta):
 	player.set_forward_input(move)
 	player.set_turn_input(turn)
 	player.set_jump_input(jump)
+	
+	update_reward_step()
 	
 func on_pickup_coin():
 	if is_instance_valid(start_platform):
@@ -105,6 +110,7 @@ func spawn_platform(spawn_origin = null, defer = false):
 		get_parent().add_child(coin_platform)
 
 	coin_platforms.append(coin_platform)
+	reset_best_goal_distance()
 
 func reset():
 	needs_reset = false
@@ -125,6 +131,7 @@ func reset():
 	player.reset(player_start_transform)
 
 	spawn_platform(Vector3(0, platform_start_position.y, 0))
+	reset_best_goal_distance()
 
 func set_heuristic(heuristic):
 	# sets the heuristic from "human" or "model"
@@ -133,22 +140,41 @@ func set_heuristic(heuristic):
 func set_action(action):
 	# convert actions from Discrete (0, 1, 2) to expected input values (-1, 0, +1)
 	# of the character controller
-	move_action = action["move"] if action["move"] <= 1 else -1
-	turn_action = action["turn"] if action["turn"] <= 1 else -1
+#	move_action = action["move"] if action["move"] <= 1 else -1
+#	turn_action = action["turn"] if action["turn"] <= 1 else -1
+#	jump_action = action["jump"] == 1
+	
+	move_action = action["move"][0]
+	turn_action = action["turn"][0]
 	jump_action = action["jump"] == 1
 
 func get_action_space():
+#	return {
+#		"move": {
+#			"size": 3, # 0, 1, 2
+#			"action_type": "discrete"
+#		},
+#		"turn": {
+#			"size": 3, # 0, 1, 2
+#			"action_type": "discrete"
+#		},
+#		"jump": {
+#			"size": 2, # 0, 1
+#			"action_type": "discrete"
+#		}
+#	}
+
 	return {
 		"move": {
-			"size": 3, # 0, 1, 2
-			"action_type": "discrete"
+			"size": 1,
+			"action_type": "continuous"
 		},
 		"turn": {
-			"size": 3, # 0, 1, 2
-			"action_type": "discrete"
+			"size": 1,
+			"action_type": "continuous"
 		},
 		"jump": {
-			"size": 2, # 0, 1
+			"size": 2,
 			"action_type": "discrete"
 		}
 	}
@@ -187,8 +213,21 @@ func get_obs():
 	# The observation of the agent, think of what is the key information that is needed to perform the task, try to have things in coordinates that a relative to the play
 	# return a dictionary with the "obs" as a key, you can have several keys
 
+	var goal_distance = 0.0
+	var goal_vector = Vector3.ZERO
+	
+	goal_distance = player.position.distance_to(coin_platforms[-1].position)
+	goal_distance = clamp(goal_distance, 0.0, platform_spawn_distance) / platform_spawn_distance
+	goal_vector = (coin_platforms[-1].position - player.position).normalized()
+	
 	var obs = []
-	# obs.append(player.get_is_grounded())
+	obs.append_array([
+		goal_distance,
+		goal_vector.x, 
+		goal_vector.y, 
+		goal_vector.z
+	])
+	obs.append(player.get_is_grounded())
 	obs.append_array(raycast_sensor.get_observation())
 
 	return {
@@ -216,12 +255,35 @@ func set_done_false():
 func update_reward(value: float):
 	reward += value
 
-func get_reward():
-	return reward
+#func get_reward():
+#	return reward
 	# var current_reward = reward
 	# reward = 0 # reset the reward to zero on every decision step
 	# return current_reward
 
+func reset_best_goal_distance():
+	best_goal_distance = platform_spawn_distance
+		
 func zero_reward():
 	reward = 0
 
+func update_reward_step():
+	reward -= 0.01 # step penalty
+	reward += shaping_reward()
+	
+func get_reward():
+	var current_reward = reward
+	reward = 0 # reset the reward to zero checked every decision step
+	return current_reward
+	
+func shaping_reward():
+	var s_reward = 0.0
+	var goal_distance = 0
+	goal_distance = player.position.distance_to(coin_platforms[-1].position)
+	#print(goal_distance)
+	if goal_distance < best_goal_distance:
+		s_reward += best_goal_distance - goal_distance
+		best_goal_distance = goal_distance
+		
+	s_reward /= 1.0
+	return s_reward 
