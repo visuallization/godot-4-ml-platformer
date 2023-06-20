@@ -74,7 +74,7 @@ func on_pickup_coin():
 	if is_instance_valid(start_platform):
 		start_platform.queue_free()
 
-	update_reward(1.0)
+	update_reward(100.0)
 	spawn_platform()
 
 func on_game_over():
