@@ -35,6 +35,7 @@ var best_goal_distance := platform_spawn_distance
 
 func _ready():
 	rng = RandomNumberGenerator.new()
+	#rng.seed = 42
 	rng.randomize()
 
 	boundaries = reset_area.get_size()
@@ -280,7 +281,7 @@ func shaping_reward():
 	var s_reward = 0.0
 	var goal_distance = 0
 	goal_distance = player.position.distance_to(coin_platforms[-1].position)
-	#print(goal_distance)
+	
 	if goal_distance < best_goal_distance:
 		s_reward += best_goal_distance - goal_distance
 		best_goal_distance = goal_distance
