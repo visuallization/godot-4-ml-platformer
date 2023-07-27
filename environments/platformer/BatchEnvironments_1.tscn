@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bivefimgoajbj"]
+
+[ext_resource type="PackedScene" uid="uid://dmrdmil31g7s" path="res://environments/platformer/Environment.tscn" id="1_8a7su"]
+[ext_resource type="PackedScene" uid="uid://dmtqjdv2vx81d" path="res://common/MoveableCamera.tscn" id="2_avdjp"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="3_3x7vg"]
+
+[node name="BatchEnvironments" type="Node3D"]
+
+[node name="Environment" parent="." instance=ExtResource("1_8a7su")]
+
+[node name="MoveableCamera" parent="." instance=ExtResource("2_avdjp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1588, 10, 104.995)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("3_3x7vg")
+speed_up = 8

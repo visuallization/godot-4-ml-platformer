@@ -66,122 +66,122 @@ cone_width = 100.0
 cone_height = 50.0
 collide_with_areas = true
 
-[node name="node_0 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_0 0@17440" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-33.87, -14.3402, 33.87)
 collide_with_areas = true
 
-[node name="node_0 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_0 1@17441" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-35.3553, 3.10033e-15, 35.3553)
 collide_with_areas = true
 
-[node name="node_0 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_0 2@17442" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-33.87, 14.3402, 33.87)
 collide_with_areas = true
 
-[node name="node_1 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_1 0@17443" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-27.474, -14.3402, 39.237)
 collide_with_areas = true
 
-[node name="node_1 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_1 1@17444" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-28.6788, 3.10033e-15, 40.9576)
 collide_with_areas = true
 
-[node name="node_1 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_1 2@17445" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-27.474, 14.3402, 39.237)
 collide_with_areas = true
 
-[node name="node_2 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_2 0@17446" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-20.2432, -14.3402, 43.4117)
 collide_with_areas = true
 
-[node name="node_2 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_2 1@17447" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-21.1309, 3.10033e-15, 45.3154)
 collide_with_areas = true
 
-[node name="node_2 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_2 2@17448" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-20.2432, 14.3402, 43.4117)
 collide_with_areas = true
 
-[node name="node_3 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_3 0@17449" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-12.3973, -14.3402, 46.2673)
 collide_with_areas = true
 
-[node name="node_3 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_3 1@17450" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-12.941, 3.10033e-15, 48.2963)
 collide_with_areas = true
 
-[node name="node_3 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_3 2@17451" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-12.3973, 14.3402, 46.2673)
 collide_with_areas = true
 
-[node name="node_4 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_4 0@17452" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-4.17471, -14.3402, 47.7172)
 collide_with_areas = true
 
-[node name="node_4 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_4 1@17453" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-4.35779, 3.10033e-15, 49.8097)
 collide_with_areas = true
 
-[node name="node_4 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_4 2@17454" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(-4.17471, 14.3402, 47.7172)
 collide_with_areas = true
 
-[node name="node_5 0" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_5 0@17455" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(4.17471, -14.3402, 47.7172)
 collide_with_areas = true
 
-[node name="node_5 1" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_5 1@17456" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(4.35779, 3.10033e-15, 49.8097)
 collide_with_areas = true
 
-[node name="node_5 2" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="@node_5 2@17457" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(4.17471, 14.3402, 47.7172)
 collide_with_areas = true
 
-[node name="@node_6 0@29914" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_6 0" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(12.3973, -14.3402, 46.2673)
 collide_with_areas = true
 
-[node name="@node_6 1@29915" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_6 1" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(12.941, 3.10033e-15, 48.2963)
 collide_with_areas = true
 
-[node name="@node_6 2@29916" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_6 2" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(12.3973, 14.3402, 46.2673)
 collide_with_areas = true
 
-[node name="@node_7 0@29917" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_7 0" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(20.2432, -14.3402, 43.4117)
 collide_with_areas = true
 
-[node name="@node_7 1@29918" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_7 1" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(21.1309, 3.10033e-15, 45.3154)
 collide_with_areas = true
 
-[node name="@node_7 2@29919" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_7 2" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(20.2432, 14.3402, 43.4117)
 collide_with_areas = true
 
-[node name="@node_8 0@29920" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_8 0" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(27.474, -14.3402, 39.237)
 collide_with_areas = true
 
-[node name="@node_8 1@29921" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_8 1" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(28.6788, 3.10033e-15, 40.9576)
 collide_with_areas = true
 
-[node name="@node_8 2@29922" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_8 2" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(27.474, 14.3402, 39.237)
 collide_with_areas = true
 
-[node name="@node_9 0@29923" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_9 0" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(33.87, -14.3402, 33.87)
 collide_with_areas = true
 
-[node name="@node_9 1@29924" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_9 1" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(35.3553, 3.10033e-15, 35.3553)
 collide_with_areas = true
 
-[node name="@node_9 2@29925" type="RayCast3D" parent="RayCastSensor3D"]
+[node name="node_9 2" type="RayCast3D" parent="RayCastSensor3D"]
 target_position = Vector3(33.87, 14.3402, 33.87)
 collide_with_areas = true

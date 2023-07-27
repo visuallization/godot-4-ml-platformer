@@ -1,0 +1,397 @@
+[gd_scene load_steps=4 format=3 uid="uid://k0moqnlp5p3r"]
+
+[ext_resource type="PackedScene" uid="uid://dmrdmil31g7s" path="res://environments/platformer/Environment.tscn" id="1_1626s"]
+[ext_resource type="PackedScene" uid="uid://dmtqjdv2vx81d" path="res://common/MoveableCamera.tscn" id="2_170vj"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="3_tuk4x"]
+
+[node name="BatchEnvironments" type="Node3D"]
+
+[node name="Environment" parent="." instance=ExtResource("1_1626s")]
+
+[node name="Environment2" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, 0)
+
+[node name="Environment3" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, 0)
+
+[node name="Environment4" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, 0)
+
+[node name="Environment5" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -229.453)
+
+[node name="Environment6" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, -229.453)
+
+[node name="Environment7" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, -229.453)
+
+[node name="Environment8" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, -229.453)
+
+[node name="Environment9" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -470.712)
+
+[node name="Environment10" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, -470.712)
+
+[node name="Environment11" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, -470.712)
+
+[node name="Environment12" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, -470.712)
+
+[node name="Environment13" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -700.165)
+
+[node name="Environment14" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, -700.165)
+
+[node name="Environment15" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, -700.165)
+
+[node name="Environment16" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, -700.165)
+
+[node name="Environment17" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, 0)
+
+[node name="Environment18" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, 0)
+
+[node name="Environment19" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, 0)
+
+[node name="Environment20" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, 0)
+
+[node name="Environment21" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, -229.453)
+
+[node name="Environment22" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, -229.453)
+
+[node name="Environment23" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, -229.453)
+
+[node name="Environment24" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, -229.453)
+
+[node name="Environment25" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, -470.712)
+
+[node name="Environment26" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, -470.712)
+
+[node name="Environment27" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, -470.712)
+
+[node name="Environment28" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, -470.712)
+
+[node name="Environment29" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, -700.165)
+
+[node name="Environment30" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, -700.165)
+
+[node name="Environment31" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, -700.165)
+
+[node name="Environment32" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, -700.165)
+
+[node name="Environment33" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 914.729)
+
+[node name="Environment34" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, 914.729)
+
+[node name="Environment35" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, 914.729)
+
+[node name="Environment36" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, 914.729)
+
+[node name="Environment37" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 685.276)
+
+[node name="Environment38" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, 685.276)
+
+[node name="Environment39" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, 685.276)
+
+[node name="Environment40" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, 685.276)
+
+[node name="Environment41" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 444.017)
+
+[node name="Environment42" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, 444.017)
+
+[node name="Environment43" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, 444.017)
+
+[node name="Environment44" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, 444.017)
+
+[node name="Environment45" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 214.564)
+
+[node name="Environment46" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.068, 0, 214.564)
+
+[node name="Environment47" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -486.223, 0, 214.564)
+
+[node name="Environment48" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -244.154, 0, 214.564)
+
+[node name="Environment49" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, 914.729)
+
+[node name="Environment50" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, 914.729)
+
+[node name="Environment51" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, 914.729)
+
+[node name="Environment52" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, 914.729)
+
+[node name="Environment53" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, 685.276)
+
+[node name="Environment54" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, 685.276)
+
+[node name="Environment55" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, 685.276)
+
+[node name="Environment56" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, 685.276)
+
+[node name="Environment57" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, 444.017)
+
+[node name="Environment58" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, 444.017)
+
+[node name="Environment59" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, 444.017)
+
+[node name="Environment60" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, 444.017)
+
+[node name="Environment61" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 961.69, 0, 214.564)
+
+[node name="Environment62" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1203.76, 0, 214.564)
+
+[node name="Environment63" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.467, 0, 214.564)
+
+[node name="Environment64" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 717.536, 0, 214.564)
+
+[node name="Environment65" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, 0)
+
+[node name="Environment66" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, 0)
+
+[node name="Environment67" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, 0)
+
+[node name="Environment68" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, 0)
+
+[node name="Environment69" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, -229.453)
+
+[node name="Environment70" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, -229.453)
+
+[node name="Environment71" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, -229.453)
+
+[node name="Environment72" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, -229.453)
+
+[node name="Environment73" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, -470.712)
+
+[node name="Environment74" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, -470.712)
+
+[node name="Environment75" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, -470.712)
+
+[node name="Environment76" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, -470.712)
+
+[node name="Environment77" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, -700.165)
+
+[node name="Environment78" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, -700.165)
+
+[node name="Environment79" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, -700.165)
+
+[node name="Environment80" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, -700.165)
+
+[node name="Environment81" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, 0)
+
+[node name="Environment82" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, 0)
+
+[node name="Environment83" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, 0)
+
+[node name="Environment84" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, 0)
+
+[node name="Environment85" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, -229.453)
+
+[node name="Environment86" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, -229.453)
+
+[node name="Environment87" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, -229.453)
+
+[node name="Environment88" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, -229.453)
+
+[node name="Environment89" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, -470.712)
+
+[node name="Environment90" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, -470.712)
+
+[node name="Environment91" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, -470.712)
+
+[node name="Environment92" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, -470.712)
+
+[node name="Environment93" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, -700.165)
+
+[node name="Environment94" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, -700.165)
+
+[node name="Environment95" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, -700.165)
+
+[node name="Environment96" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, -700.165)
+
+[node name="Environment97" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, 914.729)
+
+[node name="Environment98" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, 914.729)
+
+[node name="Environment99" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, 914.729)
+
+[node name="Environment100" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, 914.729)
+
+[node name="Environment101" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, 685.276)
+
+[node name="Environment102" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, 685.276)
+
+[node name="Environment103" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, 685.276)
+
+[node name="Environment104" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, 685.276)
+
+[node name="Environment105" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, 444.017)
+
+[node name="Environment106" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, 444.017)
+
+[node name="Environment107" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, 444.017)
+
+[node name="Environment108" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, 444.017)
+
+[node name="Environment109" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1896.84, 0, 214.564)
+
+[node name="Environment110" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1654.77, 0, 214.564)
+
+[node name="Environment111" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2383.06, 0, 214.564)
+
+[node name="Environment112" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2140.99, 0, 214.564)
+
+[node name="Environment113" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, 914.729)
+
+[node name="Environment114" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, 914.729)
+
+[node name="Environment115" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, 914.729)
+
+[node name="Environment116" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, 914.729)
+
+[node name="Environment117" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, 685.276)
+
+[node name="Environment118" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, 685.276)
+
+[node name="Environment119" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, 685.276)
+
+[node name="Environment120" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, 685.276)
+
+[node name="Environment121" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, 444.017)
+
+[node name="Environment122" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, 444.017)
+
+[node name="Environment123" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, 444.017)
+
+[node name="Environment124" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, 444.017)
+
+[node name="Environment125" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -935.148, 0, 214.564)
+
+[node name="Environment126" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -693.078, 0, 214.564)
+
+[node name="Environment127" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1421.37, 0, 214.564)
+
+[node name="Environment128" parent="." instance=ExtResource("1_1626s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1179.3, 0, 214.564)
+
+[node name="MoveableCamera" parent="." instance=ExtResource("2_170vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1588, 10, 104.995)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("3_tuk4x")
+speed_up = 8

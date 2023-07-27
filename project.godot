@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ml-platformer-4"
-run/main_scene="res://environments/platformer/BatchEnvironments.tscn"
+run/main_scene="res://environments/platformer/BatchEnvironments_16.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 

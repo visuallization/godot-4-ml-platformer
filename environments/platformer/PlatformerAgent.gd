@@ -35,8 +35,8 @@ var best_goal_distance := platform_spawn_distance
 
 func _ready():
 	rng = RandomNumberGenerator.new()
-	#rng.seed = 42
-	rng.randomize()
+	rng.seed = 42 + self.get_instance_id()
+	#rng.randomize()
 
 	boundaries = reset_area.get_size()
 	boundaries.x -= boundary_offset
@@ -53,7 +53,7 @@ func _physics_process(delta):
 	#print(raycast_sensor.get_observation())
 
 	n_steps += 1
-	if n_steps >= MAX_STEPS:
+	if n_steps >= MAX_STEPS or player.position.y < -1:
 		done = true
 		needs_reset = true
 
